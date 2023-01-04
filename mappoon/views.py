@@ -3,10 +3,10 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from django.views import View
 
-class home(View):
+class MyView(View):
     def get(self, request):
-        pass
+        return HttpResponse('get')
     
     def post(self, request):
-        pass
+        return HttpResponse('post')
     
