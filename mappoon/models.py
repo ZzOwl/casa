@@ -1,12 +1,15 @@
 from django.db import models
 
 
-#model for menues
-#model for sub menues
 
+class menu(models.Model):
+    menu_cat_name = models.CharField(max_length=200)
 
-class people(models.Model):
+class menu_cat(models.Model):
+    menu_item = models.CharField(max_length=40)
+    price = models.IntegerField(null=False)
+    cat_id = models.ForeignKey(menu, on_delete=models.PROTECT, default=None)
+    
+class customers(models.Model):    
     id = models.PositiveIntegerField(primary_key = True)
-    name = models.CharField(max_length=40)
     email = models.EmailField(max_length=40)
-    phone = models.IntegerField()
