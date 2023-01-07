@@ -13,3 +13,5 @@ class DemoForm(forms.Form):
     ]
     
     favorite_dish = forms.ChoiceField(widget=forms.RadioSelect, choices= DISH_LIST)      #by using radio select all choices will be shown at once
+    
+    #some other fields:  FileField  &   MultipleChoiceField
