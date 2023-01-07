@@ -2,7 +2,7 @@ from django import forms
 from django.forms.widgets import NumberInput    #for reservation_date
 
 class DemoForm(forms.Form):
-    name = forms.CharField(widget=forms.Textarea(attrs={'rows':5}))  # attr will determine the size of the field
+    name = forms.CharField(widget=forms.Textarea(attrs={'rows':5}), label='enter name', max_length=50)  # attr will determine the size of the field
     email = forms.EmailField(label='enter the Email')            #label text will replace the email
     reservation_date = forms.DateField(widget=NumberInput(attrs={'type' : 'date'}))
     
