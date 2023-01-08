@@ -14,5 +14,5 @@ class DemoForm(forms.Form):
     reservation_date = forms.DateField(widget=NumberInput(attrs={'type' : 'date'}))
     reservation_time = forms.TimeField(required=False)
     favorite_dish = forms.ChoiceField(widget=forms.RadioSelect, choices= DISH_LIST)      #by using radio select all choices will be shown at once
-    upload = forms.FileField(upload_to ='uploads/')
+    # upload = forms.FileField(upload_to ='uploads/')
     #some other fields:  MultipleChoiceField, FloatField
