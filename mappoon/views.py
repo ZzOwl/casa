@@ -11,13 +11,15 @@ def form_view(request):
         if form.is_valid():
             form.save()
     context = {"form" : form}
-    return HttpResponse(render(request, "home.html", context))
+    return HttpResponse(render(request, "form.html", context))
+
 
 def home(request):
     if request.method == 'GET':
-        from django.shortcuts import render 
-        return render(request, 'hello.html', {})  
-    
+        query = request.GET.get('name')
+        context={"name":query} 
+        return render(request, 'home.html', context)  
+
 ''' 
 class MyView(View):
     def get(self, request):

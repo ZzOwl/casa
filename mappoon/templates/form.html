@@ -1,0 +1,15 @@
+<p> hello </p>
+
+<form action = "" method = "post" >
+    {% csrf_token %}
+    {{ form.as_p }}
+
+    <input type = "submit" value="Submit">
+</form>
+    
+
+<!--   
+{{form.as_table}}     makes it like table <tr> tags
+{{form.as_p}}         makes it as paragragh <p> tags
+{{ form.as_ul }}         is actually    <li> tags 
+{{form.as_div}          is actually     <div> tags     -->

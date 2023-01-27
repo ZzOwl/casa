@@ -1,15 +1,11 @@
-<p> hello </p>
+<html>
 
-<form action = "" method = "post" >
-    {% csrf_token %}
-    {{ form.as_p }}
+<head> 
+<title>My django website</title> 
+</head> 
 
-    <input type = "submit" value="Submit">
-</form>
-    
+<body> 
+<h1>Helloo  {{ name }} </h1> 
+</body>
 
-<!--   
-{{form.as_table}}     makes it like table <tr> tags
-{{form.as_p}}         makes it as paragragh <p> tags
-{{ form.as_ul }}         is actually    <li> tags 
-{{form.as_div}          is actually     <div> tags     -->
+</html> 
