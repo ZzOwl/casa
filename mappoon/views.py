@@ -1,6 +1,5 @@
 from django.shortcuts import render
-# from django.http import HttpResponse
-
+from django.http import HttpResponse
 #from django.views import View     #for class based views
 from mappoon.forms import BookingForm
 
@@ -12,7 +11,12 @@ def form_view(request):
         if form.is_valid():
             form.save()
     context = {"form" : form}
-    return render(request, "home.html", context)
+    return HttpResponse(render(request, "home.html", context))
+
+def home(request):
+    if request.method == 'GET':
+        from django.shortcuts import render 
+        return render(request, 'hello.html', {})  
     
 ''' 
 class MyView(View):

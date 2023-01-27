@@ -4,5 +4,6 @@ from . import views
 
 urlpatterns =[
     path('booking/', views.form_view),
+    path('', views.home),
     #path('', views.ClassName.as_view() , name='my-view'),    #as_view is for class based views
 ]
