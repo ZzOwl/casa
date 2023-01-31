@@ -14,13 +14,12 @@ def form_view(request):
     return HttpResponse(render(request, "form.html", context))
 
 
-def home(request, name):
-    # if request.method == 'GET':
-        # query = request.GET.get('name')
-        # context={"name":query} 
-    context={'name' : name}
-    return render(request, 'home.html', context)  
-
+def home(request, id):
+    if request.method == 'GET':
+        query = request.GET.get('name')
+        person={"name":query}
+        return render(request, 'home.html', person)
+    
 ''' 
 class MyView(View):
     def get(self, request):
