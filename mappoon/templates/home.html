@@ -10,7 +10,11 @@
 </head>
 
 <body>
+    {% if not request.Get.name %} 
+    <h1>Helloo there! </h1>
+    {% else %} 
     <h1>Helloo {{ name }} </h1>
+    {% endif %} 
     <!-- <h1>Helloo  {{ lastname }} </h1> -->
     <img src="{% static '/anya.jpeg' %}" width="546">
     <h2> this is anya xD </h2>
